@@ -16,3 +16,10 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+.DS_Store
+templates
+dev
+materialize.rb
+.babelrc
+node_modules
