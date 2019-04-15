@@ -3,28 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-      <!--Let browser know website is optimized for mobile-->    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-  
-    
-    <!--<link href="https://fonts.google.com/specimen/Roboto+Slab?selection.family=Roboto+Slab" rel="stylesheet">-->
-    <!--font-family: 'Roboto Slab', serif; -->
-    <!--font-family: 'Palanquin Dark', sans-serif;-->
-    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
-
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>{{ config('app.name', 'Laravel') }}</title>
+   
+    
+    <!--import google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+
+    
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"  media="screen,projection"/>
+
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script type="text/javascript">
+          $(document).ready(function(){
+            $('select').formSelect();
+          });
+
+    </script>
 </head>
 <body style="font-family: 'Palanquin Dark', sans-serif;"  >
     <div id="app">
@@ -104,8 +113,9 @@
 
             <div class="collapse navbar-collapse" id="acoplar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
 
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
+                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Clientes <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -251,29 +261,15 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    </nav> 
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <script type="text/javascript" src="{{ asset('js/materialize.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
 </body>
 </html>

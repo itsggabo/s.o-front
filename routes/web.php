@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/nav_bar', function(){
+    return view('home');
+});
+
 Route::get('/cliente', function(){
     return view('forms.registro_cliente');
 });
@@ -23,12 +27,13 @@ Route::get('/producto', function(){
     return view('forms.registro_producto');
 });
 
-Route::get('/nav_bar', function(){
-    return view('home');
-});
-
 Route::get('/admin', function(){
     return view('layouts.app');
+});
+
+//TESTING
+Route::get('/index', function(){
+    return view('index');
 });
 
 Auth::routes();
